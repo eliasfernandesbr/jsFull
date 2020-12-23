@@ -24,8 +24,8 @@ function calcMedia(n1, n2){
 for(var index in nomes){
     var nota1 = notasA[index]
     var nota2 = notasB[index]
-    var m = calcMedia(nota1, nota2);
+    var media = calcMedia(nota1, nota2);
 
     console.log(nomes[index] +  " - " + nota1 + " - " + nota2 +
-     " - MÉDIA: " + m + " - " + passou(m));
+     " - MÉDIA: " + media + " - " + passou(media));
 }
