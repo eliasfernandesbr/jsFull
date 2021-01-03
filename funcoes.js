@@ -7,7 +7,7 @@
 // console.log(soma(10,20));
 
 function saudacao() {
-  return "Olá mundooo!";
+  return "Olá mundooo2!";
 }
 
 var s = saudacao();
