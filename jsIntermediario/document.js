@@ -1,1 +1,0 @@
-document.body.innerHTML = "<h1> Esse título foi inserido com JS"
