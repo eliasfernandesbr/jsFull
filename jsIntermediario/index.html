@@ -12,10 +12,37 @@
     </style>
   </head>
   <body>
-    <h1 onclick="h1click()">CLIQUE AQUI</h1>
+    <h1 id="testeH1" onclick="h1click()">CLIQUE AQUI</h1>
 
-    <input type="text" onchange="changeH1()">
+    <input id="texto" type="text" oninput="changeH1()" /> <!--oninput atualiza o texto automáticamente-->
+
+
+    <!-- <input id="texto" type="text" onchange="changeH1()" /> 
     
+    --------------------------------------------------------------
+    -->
+
+
+    <!--Nesse caso, em changeH1(this) e passar em evento.js
+    como parâmetro o input.
+    Ficando da seguinte forma: <input id="texto" type="text" onchange="changeH1(this)"> e no eventos.js:
+    function changeH1() {
+    let h1 = document.querySelector("h1");
+    h1.innerText = input.value;} -->
+
+    <style>
+        div{
+            display: inline-block;
+            padding: 5px;
+            font-size: 0.9rem;
+            background-color: blueviolet;
+            color: white;
+            /* border: none; */
+            border-radius: 7px;
+        }
+    </style>
+
+    <div onclick="hideH1()">CLICK</div>
 
     <script src="eventos.js"></script>
   </body>
