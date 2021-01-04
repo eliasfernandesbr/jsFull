@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="t1">titulo 1</h1>
+
+    <h2 id="t2">outro titulo qualquer</h2>
+
+    <script>
+
+        let t1 = document.getElementById("t1");
+        let t2 = document.getElementById("t2");
+
+        t1.onclick = colocarEmMaiusculo;
+        t2.onclick = colocarEmMaiusculo;
+
+        function colocarEmMaiusculo(){
+            this.innerHTML = this.innerHTML.toUpperCase(); //this.innetHTML (texto minusculo)
+            // = this.innerHTML.toUpperCase(pega o texto anterior em minusculo e apssa para maiusculo)
+        }
+
+        // nese caso acima o this é genérico "isso", quando clica no primeiro titulo o this será o primeiro
+        //quando clica no segundo o this será o segundo
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
