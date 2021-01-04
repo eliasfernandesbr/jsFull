@@ -11,18 +11,18 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="console.log('Página completamente carregada')">
+    <div>
+      <img id="xbox" src="/imagens/controlxbox.png" alt="" />
+    </div>
+
     <h1 id="testeH1" onclick="h1click()">CLIQUE AQUI</h1>
 
-    <input id="texto" type="text" oninput="changeH1()" /> <!--oninput atualiza o texto automáticamente-->
-
-
-    <!-- <input id="texto" type="text" onchange="changeH1()" /> 
-    
+    <input id="texto" type="text" oninput="changeH1()" />
+    <!--oninput atualiza o texto automáticamente-->
+    <!-- <input id="texto" type="text" onchange="changeH1()" />   
     --------------------------------------------------------------
     -->
-
-
     <!--Nesse caso, em changeH1(this) e passar em evento.js
     como parâmetro o input.
     Ficando da seguinte forma: <input id="texto" type="text" onchange="changeH1(this)"> e no eventos.js:
@@ -31,18 +31,37 @@
     h1.innerText = input.value;} -->
 
     <style>
-        div{
-            display: inline-block;
-            padding: 5px;
-            font-size: 0.9rem;
-            background-color: blueviolet;
-            color: white;
-            /* border: none; */
-            border-radius: 7px;
-        }
+      #divClick {
+        display: inline-block;
+        padding: 5px;
+        font-size: 0.9rem;
+        background-color: #8a2be2;
+        color: white;
+        /* border: none; */
+        border-radius: 7px;
+      }
+
+      img {
+        width: 250px;
+        margin-left: 0px;
+      }
+
+      body {
+        background-color: #444;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
     </style>
 
-    <div onclick="hideH1()">CLICK</div>
+    <div
+      onmouseover="onOver(this)"
+      onmouseout="onOut(this)"
+      id="divClick"
+      onclick="hideH1()"
+      onclick="hideImg()"
+    >
+      CLICK
+    </div>
 
     <script src="eventos.js"></script>
   </body>
