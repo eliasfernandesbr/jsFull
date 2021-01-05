@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="display"></h1>
+    <button onclick="sortear()">SORTEAR</button>
+
+    <script>
+      function sortear() {
+        let numerodePessoas = 100;
+        let numeroSorteado = Math.round(Math.random() * numerodePessoas);
+
+        document.getElementById("display")
+        .innerHTML = numeroSorteado;
+      }
+    </script>
+  </body>
+</html>
