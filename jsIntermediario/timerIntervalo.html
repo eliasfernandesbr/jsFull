@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TÍTULO</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>TÍTULO</h1>
-    <input onclick="mudarTexto()" type="submit">
-
-
+    <input onclick="iniciar()" type="submit" value="Iniciar" />
+    <input onclick="parar()" type="submit" value="Parar" />
 
     <script>
+    //   function mudarCor() {
+    //     let h = document.getElementsByTagName("h1")[0];
+    //     h.style.color = "blue";
+    //   }
 
-function mudarTexto(){
-    let h = document.getElementByTagName("")
-}
+    var numero = 0;
 
+    // var interval;
+
+    var timer; 
+
+    function atualizarTexto(){
+        let h = document.getElementsByTagName("h1")[0];
+        h.innerHTML += " " + numero;
+        numero++;
+
+
+    }
+
+      function iniciar() {
+        // let h = document.getElementsByTagName("h1")[0];
+        // h.innerHTML = "Novo título";
+
+        // window.setTimeout(mudarCor, 1000);
+
+        // interval = window.setInterval(atualizarTexto, 200);
+
+        timer = setTimeout(atualizarTexto, 3000);
+      }
+
+      function parar(){
+          clearTimeout(timer); //cancela o inicio do timer
+      }
     </script>
-    
-</body>
+  </body>
 </html>
