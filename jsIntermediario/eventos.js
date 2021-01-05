@@ -10,10 +10,17 @@ function changeH1() {
 
 function hideH1() {
   let h1 = document.getElementById("testeH1");
-//   let img = document.getElementById("xbox");
-  h1.style.display = "none";
-//   img.style.display = "none";
+  let img = document.getElementById("xbox");
+  if (h1.style.display === "none") { //nesse caso, irá comparar se está mostrando, caso não...
+    h1.style.display = "block";
+    img.style.display = "block";
+  } else {
+    h1.style.display = "none";
+    img.style.display = "none";
+  }
 }
+
+
 
 // function hideImg() {
 //     // let h1 = document.getElementById("testeH1");
